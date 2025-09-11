@@ -1037,18 +1037,14 @@ This package provides the python2 version of boom.
   - CP-46075: Disable cluster and cmirror as not used and introduce extra deps
   * Thu Jul 11 2024 Lin Liu <Lin.Liu01@cloud.com> - 7:2.02.180-17
   - CP-46075: Compatible with XS9
-  * Fri Mar 22 2024 Mark Syms <mark.syms@citrix.com> - 7:2.02.180-16
-  - CA-368585 Drop sm-config sub-package
-  - CA-380627 Suppress errors when attempting to start services
-  - CA-384527 add lvm filter to skip nbd device scan
 
 * Tue Jun 18 2024 Samuel Verschelde <stormi-xcp@ylix.fr> - 7:2.02.180-16.1
 - Rebase on 7:2.02.180-16
 - *** Ustream changelog ***
-- * Fri Mar 22 2024 Mark Syms <mark.syms@citrix.com> - 7:2.02.180-16
-- - CA-368585 Drop sm-config sub-package
-- - CA-380627 Suppress errors when attempting to start services
-- - CA-384527 add lvm filter to skip nbd device scan
+  * Fri Mar 22 2024 Mark Syms <mark.syms@citrix.com> - 7:2.02.180-16
+  - CA-368585 Drop sm-config sub-package
+  - CA-380627 Suppress errors when attempting to start services
+  - CA-384527 add lvm filter to skip nbd device scan
 
 * Tue Apr 18 2023 Samuel Verschelde <stormi-xcp@ylix.fr> - 7:2.02.180-15.2
 - Drop the obsolete lvm2-sm-config subpackage
