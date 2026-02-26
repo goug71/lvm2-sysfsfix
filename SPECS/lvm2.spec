@@ -1,6 +1,6 @@
-%global package_speccommit 2b33460664df9ff802649946efc547b2e9d01676
+%global package_speccommit 7dd8a5c1bda08011e94ee1fa9421d8c37759399d
 %global usver 2.02.180
-%global xsver 18.2
+%global xsver 18.3
 %global xsrel %{xsver}%{?xscount}%{?xshash}
 %global package_srccommit v2_02_180
 %global device_mapper_version 1.02.149
@@ -274,6 +274,7 @@ sed -i 's/udev_sync = 1/udev_sync = 0/' $RPM_BUILD_ROOT/%{_sysconfdir}/lvm/lvm.c
 sed -i 's/udev_rules = 1/udev_rules = 0/' $RPM_BUILD_ROOT/%{_sysconfdir}/lvm/lvm.conf
 sed -i 's/obtain_device_list_from_udev = 1/obtain_device_list_from_udev = 0/' $RPM_BUILD_ROOT/%{_sysconfdir}/lvm/lvm.conf
 sed -i 's/write_cache_state = 1/write_cache_state = 0/' $RPM_BUILD_ROOT/%{_sysconfdir}/lvm/lvm.conf
+sed -i 's/[# ]*types =.*$/types = \[ "scini", 16 \]/' $RPM_BUILD_ROOT/%{_sysconfdir}/lvm/lvm.conf
 
 mkdir $RPM_BUILD_ROOT/%{_sysconfdir}/lvm/master
 cp $RPM_BUILD_ROOT/%{_sysconfdir}/lvm/lvm.conf $RPM_BUILD_ROOT/%{_sysconfdir}/lvm/master/lvm.conf
@@ -1019,6 +1020,9 @@ This package provides the python2 version of boom.
 %{?_cov_results_package}
 
 %changelog
+* Wed Dec 03 2025 Mark Syms <mark.syms@citrix.com> - 7:2.02.180-18.3
+- CP-31079: update default configuration
+
 * Thu May  1 2025 Mark Syms <mark.syms@cloud.com> - 7:2.02.180-18.2
 - Rebuild
 
